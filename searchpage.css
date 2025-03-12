@@ -4,13 +4,15 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
 .search-container {
-    width: 300px;
+    width: 80%;
+    max-width: 600px; /* 调整搜索框最大宽度为合理值 */
     position: relative;
 }
 
@@ -45,6 +47,7 @@ body {
 #results li:hover {
     background-color: #f0f0f0;
 }
+
 /* 添加图片样式 */
 .container {
     display: flex;
@@ -52,19 +55,17 @@ body {
     align-items: center; /* 水平居中 */
     min-height: 100vh;
     padding: 20px;
+    position: relative; /* 为图片定位提供参考 */
 }
 
 /* 图片样式 */
 .header-image {
-    max-width: 300px; /* 根据实际图片尺寸调整 */
-    width: 100%;
-    height: auto;
-    margin-bottom: 300px; /* 控制图片和搜索框之间的间距 */
-}
-
-/* 搜索容器样式 */
-.search-container {
-    width: 80%;
-    max-width: 80000px; /* 控制搜索框最大宽度 */
-    position: relative;
+    width: 300px; /* 固定图片宽度 */
+    height: 200px; /* 固定图片高度 */
+    object-fit: cover; /* 保持图片比例并覆盖容器 */
+    position: absolute;
+    top: 100px; /* 调整图片顶部距离 */
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+    margin-bottom: 30px; /* 控制图片和搜索框之间的间距 */
 }
