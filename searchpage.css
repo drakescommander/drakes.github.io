@@ -1,70 +1,23 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目搜索</title>
+    <link rel="stylesheet" href="searchpage.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 居中图片 -->
+        <img src="6301741664961_.pic.jpg" alt="网站Logo" class="header-image">
+        
+        <!-- 搜索容器 -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="搜索人名或项目名...">
+            <ul id="results"></ul>
+        </div>
+    </div>
 
-.search-container {
-    width: 80%;
-    max-width: 600px; /* 调整搜索框最大宽度为合理值 */
-    position: relative;
-}
-
-#searchInput {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#results {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    max-height: 200px;
-    overflow-y: auto;
-    position: absolute;
-    width: 100%;
-    background-color: white;
-    display: none;
-}
-
-#results li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-#results li:hover {
-    background-color: #f0f0f0;
-}
-
-/* 添加图片样式 */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 水平居中 */
-    min-height: 100vh;
-    padding: 20px;
-    position: relative; /* 为图片定位提供参考 */
-}
-
-/* 图片样式 */
-.header-image {
-    width: 300px; /* 固定图片宽度 */
-    height: 200px; /* 固定图片高度 */
-    position: absolute;
-    top: 100px; /* 调整图片顶部距离 */
-    left: 50%;
-    transform: translateX(-50%); /* 水平居中 */
-    margin-bottom: 30px; /* 控制图片和搜索框之间的间距 */
-}
+    <script src="searchpage.js"></script>
+</body>
+</html>
